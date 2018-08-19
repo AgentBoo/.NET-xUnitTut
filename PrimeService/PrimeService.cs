@@ -11,7 +11,18 @@ namespace Prime.Services
             {
                 return false;
             }
-            throw new NotImplementedException("Please create a test first");
+
+            for(var divisor = 2; divisor <= Math.Sqrt(candidate); divisor++)
+            {
+                if(candidate % divisor == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true; 
+
+            // throw new NotImplementedException("Please create a test first");
         }
     }
 }
